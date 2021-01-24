@@ -1,0 +1,12 @@
+[package]
+name = "web_stock_checker"
+version = "0.1.0"
+authors = ["Ray Kochenderfer <35624960+GimpFlamingo@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.0", features = ["blocking"]}
+select = "0.5.0"
+lazy_static = "1.4.0"
