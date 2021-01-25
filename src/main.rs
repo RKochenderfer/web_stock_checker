@@ -2,7 +2,6 @@
 mod mailer;
 mod scraper;
 mod site;
-mod trim;
 
 use crate::mailer::MailerBuilder;
 use crate::scraper::ScraperBuilder;
