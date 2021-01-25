@@ -12,11 +12,13 @@ Looking for
 */
 
 /// The URLS that will be searched
-const URLS: [&str; 4] = [
+const URLS: [&str; 6] = [
     "https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorus-x-24gd/p/N82E16814932340?Description=rtx%203090&cm_re=rtx_3090-_-14-932-340-_-Product",
     "https://www.newegg.com/gigabyte-geforce-rtx-3090-gv-n3090aorus-m-24gd/p/N82E16814932341?Description=rtx%203090&cm_re=rtx_3090-_-14-932-341-_-Product",
     "https://www.newegg.com/asus-geforce-rtx-3090-rog-strix-rtx3090-o24g-gaming/p/N82E16814126456?Description=rtx%203090&cm_re=rtx_3090-_-14-126-456-_-Product&quicklink=true",
-    "https://www.newegg.com/msi-geforce-rtx-3090-rtx-3090-gaming-x-trio-24g/p/N82E16814137595?Description=rtx%203090&cm_re=rtx_3090-_-14-137-595-_-Product&quicklink=true"];
+    "https://www.newegg.com/msi-geforce-rtx-3090-rtx-3090-gaming-x-trio-24g/p/N82E16814137595?Description=rtx%203090&cm_re=rtx_3090-_-14-137-595-_-Product&quicklink=true",
+    "https://www.newegg.com/asus-geforce-rtx-3090-tuf-rtx3090-o24g-gaming/p/N82E16814126454?Description=rtx%203090&cm_re=rtx_3090-_-14-126-454-_-Product",
+    "https://www.newegg.com/evga-geforce-rtx-3090-24g-p5-3987-kr/p/N82E16814487526?Description=rtx%203090&cm_re=rtx_3090-_-14-487-526-_-Product"];
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -54,7 +56,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     println!("Failed to send email");
                 }
             }
-            Err(e) => println!("Failed to send email: {}", e),
+            Err(e) => println!("Failed to send email: {:?}", e),
         }
     }
 
